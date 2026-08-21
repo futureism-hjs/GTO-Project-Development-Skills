@@ -2,6 +2,10 @@
 
 This map names implementations known to match the Minecraft 1.20.1 / GTOCore 0.5.6-beta baseline and points to documents that define their actual acceptance status. A listed implementation is not proof that every hands-on behavior passed. Locate sources with `rg --files` and `rg -n`; do not assume a machine-specific absolute workspace path.
 
+Use explicit acceptance levels when updating the active documentation: `source-audited`, `compile-verified`, `client-load-verified`, `dedicated-server-verified`, `hands-on-verified`, or `pending`. A skill template may reuse only the levels recorded for the exact implementation; build/load evidence does not imply hands-on placement or gameplay acceptance.
+
+If an available source tree reports a different dependency version from the active project's declared or resolved baseline, prefer the active documentation and resolved runtime/JAR for the contract. Record the mismatch, inspect only the symbols needed for the request, and do not silently copy behavior from the mismatched tree.
+
 ## Active GTOHJS Documentation
 
 | Topic | Document |

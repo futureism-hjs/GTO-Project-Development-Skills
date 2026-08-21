@@ -24,6 +24,8 @@ The first resource is the casing layer and the second is the controller face/wor
 
 Create a custom renderer only when the established renderer cannot represent required per-side, per-state, or dynamic behavior. Keep it client-only, reuse existing resource IDs when licensing and runtime ownership permit, and verify dedicated-server class loading.
 
+For a layered part with custom animated or stateful casing behavior, inspect the active `MESuperPatternBufferRegistration` and `AmprosiumPatternBufferRenderer` path before designing another renderer. Reuse that renderer or its narrowest established extension when its layer contract matches; create a new renderer only when the required behavior still cannot be expressed.
+
 For every renderer:
 
 - verify the casing tier and overlay ID independently;
@@ -47,4 +49,3 @@ The verified extension is a passive cover with vacuum tier 3:
 Never replace the full native condition with a custom approximation. In the verified implementation, required tiers 1-3 may be satisfied by the cover, tier 4 is never satisfied by it, and a multiblock controller searches only its maintenance parts for the cover.
 
 When creating a vacuum machine rather than a cover, reuse GTOCore's steam/electric vacuum pump pattern: the specialized machine implements the vacuum interface, its definition advertises the supported tier, and recipes use the native vacuum condition.
-

@@ -19,9 +19,11 @@ Pair<MachineDefinition, MachineDefinition> definitions =
                         .register());
 ```
 
-Preserve the pressure boolean in the machine factory, renderer, throughput, tank, tooltip, and recipe modifier. Do not model the pair as ordinary electric tiers. Use a specialized machine class when the recipe condition needs additional state, as the native steam vacuum pump does.
+Preserve the pressure boolean only in the factory, renderer, throughput or recipe modifier, and tooltip paths that the selected machine class actually consumes. Do not infer pressure-specific tank-capacity scaling: follow the native tank contract unless a specialized controller explicitly changes it. Do not model the pair as ordinary electric tiers. Use a specialized machine class when the recipe condition needs additional state, as the native steam vacuum pump does.
 
 Validate both definitions and both final IDs.
+
+When a registration is injected into an existing native window, keep one idempotent registration state for the definition path. Reject duplicate or ambiguous injection anchors, and validate both pair members before later lifecycle callbacks can observe the definitions.
 
 ## Electric Single-Block Machines
 
@@ -79,6 +81,6 @@ Pattern rules:
 - Use `Predicates.any()` only for deliberately ignored coordinates; it does not require air.
 - Select `autoAbilities`, `autoAccelerateAbilities`, `autoGCYMAbilities`, or `autoLaserAbilities` from the native controller contract. They are not interchangeable.
 - A part accepted by the pattern has no effect unless the controller or recipe modifier reads it.
+- If a requested hatch changes the runtime formula or introduces a new consumer, stop at the contract boundary and audit the new ABI before adding an ability. A pattern that matches an existing parallel or acceleration hatch is not evidence that a new effect is implemented.
 
 Validate registry identity, recipe types, non-null renderer, preview flags, non-null pattern suppliers, and successful pattern construction.
-
