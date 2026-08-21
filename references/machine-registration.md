@@ -82,4 +82,3 @@ Pattern rules:
 
 Validate registry identity, recipe types, non-null renderer, preview flags, non-null pattern suppliers, and successful pattern construction.
 
-

@@ -1,9 +1,7 @@
 interface:
   display_name: "GTO Project Development Skills"
-  short_description: "Verified GTO machine, recipe, hatch, UI, and AE workflows"
+  short_description: "GTO machine, recipe, hatch, UI, and AE workflows"
   default_prompt: "Use $gto-project-development-skills /配方注册 to implement a verified GTO recipe registration."
 
 policy:
   allow_implicit_invocation: true
-
-

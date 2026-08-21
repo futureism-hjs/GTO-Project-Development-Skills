@@ -1,6 +1,6 @@
-# Verified Source Map
+# Evidence and Validation Map
 
-This map names implementations known to match the Minecraft 1.20.1 / GTOCore 0.5.6-beta baseline. Locate them with `rg --files` and `rg -n`; do not assume a machine-specific absolute workspace path.
+This map names implementations known to match the Minecraft 1.20.1 / GTOCore 0.5.6-beta baseline and points to documents that define their actual acceptance status. A listed implementation is not proof that every hands-on behavior passed. Locate sources with `rg --files` and `rg -n`; do not assume a machine-specific absolute workspace path.
 
 ## Active GTOHJS Documentation
 
@@ -17,6 +17,8 @@ This map names implementations known to match the Minecraft 1.20.1 / GTOCore 0.5
 | GTOCore/GTOLib part audit | `docs/09_gtocore_gtolib_parts_audit.md` |
 | Parallel and thread behavior | `docs/24_fix64_unbounded_custom_parallel_threads.md` |
 | ME input assemblies and delayed validation | `docs/25_fix65_me_input_assemblies.md`, `docs/26_fix66_deferred_me_ability_validation.md` |
+| Native ME assembly recipes | `docs/27_fix67_me_assembly_recipes.md` |
+| Preloaded AE component packs | `docs/28_preloaded_ae_component_packs.md` |
 | ME Placement Tool port | `docs/34_me_placement_tool_gto_port.md` |
 | Super pattern buffers | `docs/36_me_super_pattern_buffer_config.md`, `docs/37_me_super_wildcard_pattern_buffer.md` |
 
@@ -33,13 +35,15 @@ Use the active registration template at the project root as the first code-shape
 | Left-side filter tab | `AdvancedInfiniteIntakeHatchPartMachine` |
 | Scrollable mode tabs | `PatternBufferModeSupport`, `ScrollablePatternBufferModeFancyConfigurator`, `UniversalSteamFactoryModeSupport` |
 | Input part behavior | `AdvancedInfiniteIntakeHatchPartMachine`, `MEInputAssemblyPartMachine`, `MEStockingInputAssemblyPartMachine` |
-| Item descriptions | `GTOHJSItemTooltipHandler`, `assets/gtohjs/lang/en_us.json`, `assets/gtohjs/lang/zh_cn.json` |
+| Item descriptions | the vacuum-cover conditional and generic provenance line in `GTOHJSItemTooltipHandler`; only the stable requested keys in `assets/gtohjs/lang/en_us.json` and `assets/gtohjs/lang/zh_cn.json` |
 | Layered tiered rendering | `MEInputAssemblyRegistration`, `MESuperPatternBufferRegistration` |
 | Vacuum | `VacuumCoverRegistration`, `VacuumCoverBehavior`, `VacuumCoverSupport`, `gtohjs_vacuum_cover.js` |
 | AE registration | `MEInputAssemblyRegistration`, `MESuperPatternBufferRegistration`, `MESuperWildcardPatternBufferRegistration` |
+| AE part recipes | `MEInputAssemblyRecipeRegistration` and the matching inline coremod builder/save injection |
+| Preloaded AE storage | `PreloadedPortableCellItem`, `AEComponentPackContents`, `GTOHJSItems`, `GTOHJSItemColorRegistration` |
 | AE output and routing | `MESuperPatternBufferPartMachine`, `MESuperWildcardPatternBufferPartMachine`, `MEOutputCapablePatternBufferPartMachine` |
 
-The stable intake definition is registered by the existing intake registration methods in `ThermalAndIntakeHatchRegistration`. Use only those intake methods as evidence; do not generalize unrelated registrations from the same file.
+For tooltip evidence, inspect only the vacuum-cover conditional and the shared provenance line. Do not copy the complete `GTOCORE_MACHINE_PATHS` allowlist or unrelated adjacent localization keys into a new template.
 
 ## Read-Only Native References
 
@@ -54,5 +58,3 @@ The stable intake definition is registered by the existing intake registration m
 | Multiblock layer composition | Native `.workableCasingRenderer(casing, overlay)` definitions |
 
 Never modify these dependency trees. If their current source conflicts with active documentation, update the fact base first, then adapt the active project.
-
-

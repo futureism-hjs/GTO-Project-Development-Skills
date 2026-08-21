@@ -1,6 +1,6 @@
 ---
 name: gto-project-development-skills
-description: Develop and maintain GregTech Odyssey machine registrations, recipes, recipe types, side tabs, multiblock parts, layered renderers, vacuum behavior, maintenance integration, item descriptions, and AE2/ME integrations by reusing verified GTOHJS and native GTO patterns. Use when a request selects one of this skill's Chinese command routes or asks for the same GTO development work.
+description: Develop and maintain GregTech Odyssey machine registrations, recipes, recipe types, side tabs, multiblock parts, layered renderers, vacuum behavior, maintenance integration, item descriptions, and AE2/ME integrations by reusing established GTOHJS and native GTO patterns with documented validation boundaries. Use when a request selects one of this skill's Chinese command routes or asks for the same GTO development work.
 ---
 
 # GTO Project Development Skills
@@ -9,7 +9,7 @@ Use this skill for the GTO 0.5.6-beta development baseline. Preserve the active 
 
 ## Command Router
 
-The Chinese strings below are task selectors inside this skill. Codex does not register arbitrary native slash commands. Explicit invocation is `$gto-project-development-skills /命令`; a direct `/命令` request may also select this skill through its description.
+The Chinese strings below are task selectors inside this skill. Codex does not register arbitrary native slash commands. Explicit invocation is `$gto-project-development-skills /<selector>`; a direct `/<selector>` request may also select this skill through its description.
 
 | Selector | Read |
 | --- | --- |
@@ -28,7 +28,7 @@ The Chinese strings below are task selectors inside this skill. Codex does not r
 | `/真空等级相关` | [Rendering and vacuum](references/rendering-and-vacuum.md#vacuum-level-integration) |
 | `/ae相关` | [AE integration](references/ae-integration.md) |
 
-Always read [Shared workflow](references/shared-workflow.md). Use [Verified source map](references/verified-source-map.md) to locate the closest working implementation before editing.
+Always read [Shared workflow](references/shared-workflow.md). Use [Evidence and validation map](references/verified-source-map.md) to locate the closest working implementation and its acceptance boundary before editing.
 
 ## Non-Negotiable Constraints
 
@@ -39,5 +39,3 @@ Always read [Shared workflow](references/shared-workflow.md). Use [Verified sour
 - Use Java 21 for Gradle, allow dependency downloads, and run a clean build unless the user explicitly changes the build requirement.
 - Update the English development document, task checklist, and read index in the same task as the behavior change.
 - Do not promote experimental or incomplete code into a template.
-
-

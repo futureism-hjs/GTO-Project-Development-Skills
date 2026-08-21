@@ -53,4 +53,3 @@ Crafting-table recipes use `VanillaRecipeHelper` in the same native `Data.common
 
 Never patch EMI to compensate for a bad machine definition, recipe type, or final recipe table.
 
-

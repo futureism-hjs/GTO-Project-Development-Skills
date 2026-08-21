@@ -45,8 +45,6 @@ Use builder tooltips for definition-owned behavior:
         .withStyle(ChatFormatting.AQUA))
 ```
 
-Use an `ItemTooltipEvent` handler only for cross-cutting metadata or item-specific text that the machine builder does not own. `GTOHJSItemTooltipHandler` is the verified example: it filters by registry ID, adds a feature tooltip for a specific item, then adds a shared provenance line.
+Use an `ItemTooltipEvent` handler only for cross-cutting metadata or item-specific text that the machine builder does not own. For the verified vacuum-cover example, inspect only the `vacuum_cover` conditional and the shared provenance line in `GTOHJSItemTooltipHandler`. Do not copy its complete registry-ID allowlist or unrelated adjacent feature keys into a new implementation.
 
 Keep technical claims synchronized with actual behavior. Translate placeholders identically across languages, preserve formatting arguments, and validate both JSON files with a structured parser. Do not hard-code visible user text in widgets when a translation key can be used.
-
-

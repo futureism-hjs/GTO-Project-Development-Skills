@@ -48,4 +48,3 @@ Never replace the full native condition with a custom approximation. In the veri
 
 When creating a vacuum machine rather than a cover, reuse GTOCore's steam/electric vacuum pump pattern: the specialized machine implements the vacuum interface, its definition advertises the supported tier, and recipes use the native vacuum condition.
 
-

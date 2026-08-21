@@ -6,7 +6,7 @@ Use this order:
 
 1. Read the nearest agent instructions and project index.
 2. Read the active feature document and registration template.
-3. Inspect the current implementation named in the verified source map.
+3. Inspect the current implementation named in the evidence and validation map.
 4. Read targeted GTOCore, GTOLib, GTCEu, or AE2 source only when the active documentation is absent, inconsistent, or insufficient for the requested behavior.
 
 Record every opened file in the project's English read index. A scoped `rg` discovery scan may be indexed by directory and glob; any source file used as implementation evidence must be listed individually.
@@ -57,5 +57,3 @@ Do not mistake a too-early ability-table read for a failed definition registrati
 - Follow the active project's deployment and command-line client verification rules after a successful build.
 - Write development documents, task/completion records, agent instructions, and indexes in English.
 - Preserve literal registry IDs, translation keys, class names, and user-defined Chinese command selectors.
-
-

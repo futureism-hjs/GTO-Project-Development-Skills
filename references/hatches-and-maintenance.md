@@ -19,7 +19,7 @@ Do not stop after `.abilities(...)`. GTOCore's verified examples are:
 | Thread hatch | `GTOPartAbility.THREAD_HATCH` | configured thread count | thread-aware controller/modifier |
 | Overclock hatch | `GTOPartAbility.OVERCLOCK_HATCH` | configured overclock policy | overclock-aware controller/modifier |
 
-Reuse the existing part class and registration helper when the requested behavior matches. Register tier arrays with `registerTieredMachines`, attach the exact ability, use the existing tiered hull/overlay renderer, and keep tooltip values derived from the same tier formula as runtime behavior.
+Reuse the existing part class and its owning registration helper when the requested behavior matches. Preserve helper ownership: native parallel hatches use `MachineRegisterUtils.registerTieredGTMMachines`, while other tiered parts may use `registerTieredMachines` or a capability-specific helper. Attach the exact ability, use the existing tiered hull/overlay renderer, and keep tooltip values derived from the same tier formula as runtime behavior.
 
 At pattern level, use a deliberate limit such as `setMaxGlobalLimited(1)`. Validate definition identity during registration and ability membership only after Registrate binds candidate blocks.
 
@@ -50,5 +50,3 @@ Use the native maintenance contract instead of creating a parallel fault system.
 - Preserve original maintenance problems, recovery tools, perfect-maintenance behavior, and recipe penalties unless the requested feature explicitly changes them.
 
 The active one-stop rare-earth plant and many native electric/GCYM machines are verified exact-one patterns. Steam multiblocks should not gain maintenance by default; first select a controller that supports it.
-
-
