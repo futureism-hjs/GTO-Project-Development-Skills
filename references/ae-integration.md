@@ -1,5 +1,17 @@
 # AE Integration
 
+Use this document only for `/ae相关`. Read the subsection that matches the request instead of loading the entire file. Consult [Shared workflow](shared-workflow.md) for native registration windows and [Evidence and validation map](verified-source-map.md) for acceptance boundaries. For layered ME-part materials, use [Layered material rendering](layered-rendering.md); for native recipe builder details, use [Recipe registration](recipe-registration.md).
+
+## Contents
+
+- [ME multiblock parts](#me-multiblock-parts)
+- [Pattern buffers](#pattern-buffers)
+- [Native ME part recipes](#native-me-part-recipes)
+- [Preloaded AE component packs](#preloaded-ae-component-packs)
+- [AE UI](#ae-ui)
+- [Network placement](#network-placement-buildload-verified-hands-on-placement-pending)
+- [Validation](#validation)
+
 Use the target runtime's customized AE2 API and GTO AE registration window. Do not assume upstream AE2 behavior is byte-for-byte identical.
 
 ## ME Multiblock Parts

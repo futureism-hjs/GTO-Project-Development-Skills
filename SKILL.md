@@ -13,22 +13,22 @@ The Chinese strings below are task selectors inside this skill. Codex does not r
 
 | Selector | Read |
 | --- | --- |
-| `/蒸汽单方块机器注册` | [Machine registration](references/machine-registration.md#steam-single-block-machines) |
-| `/电力单方块机器注册` | [Machine registration](references/machine-registration.md#electric-single-block-machines) |
-| `/蒸汽类多方块机器注册` | [Machine registration](references/machine-registration.md#steam-multiblock-machines) |
-| `/电力多方块机器注册` | [Machine registration](references/machine-registration.md#electric-multiblock-machines) |
-| `/配方注册` | [Recipes and recipe types](references/recipes-and-recipe-types.md#recipe-registration) |
-| `/配方类型注册` | [Recipes and recipe types](references/recipes-and-recipe-types.md#recipe-type-registration) |
-| `/左侧标签栏编写` | [UI and item descriptions](references/ui-and-item-descriptions.md#left-side-tabs) |
-| `/物品介绍编写` | [UI and item descriptions](references/ui-and-item-descriptions.md#item-descriptions) |
-| `/功能性仓室注册` | [Hatches and maintenance](references/hatches-and-maintenance.md#functional-hatches) |
-| `/输入输出类仓室注册` | [Hatches and maintenance](references/hatches-and-maintenance.md#input-and-output-parts) |
-| `/维护功能相关` | [Hatches and maintenance](references/hatches-and-maintenance.md#maintenance-integration) |
-| `/组合类材质渲染` | [Rendering and vacuum](references/rendering-and-vacuum.md#layered-rendering) |
-| `/真空等级相关` | [Rendering and vacuum](references/rendering-and-vacuum.md#vacuum-level-integration) |
+| `/蒸汽单方块机器注册` | [Steam single-block machines](references/steam-single-block-machines.md) |
+| `/电力单方块机器注册` | [Electric single-block machines](references/electric-single-block-machines.md) |
+| `/蒸汽类多方块机器注册` | [Steam multiblock machines](references/steam-multiblock-machines.md) |
+| `/电力多方块机器注册` | [Electric multiblock machines](references/electric-multiblock-machines.md) |
+| `/配方注册` | [Recipe registration](references/recipe-registration.md) |
+| `/配方类型注册` | [Recipe type registration](references/recipe-type-registration.md) |
+| `/左侧标签栏编写` | [Left-side tabs](references/left-side-tabs.md) |
+| `/物品介绍编写` | [Item descriptions](references/item-descriptions.md) |
+| `/功能性仓室注册` | [Functional hatches](references/functional-hatches.md) |
+| `/输入输出类仓室注册` | [Input and output parts](references/input-output-parts.md) |
+| `/维护功能相关` | [Maintenance integration](references/maintenance-integration.md) |
+| `/组合类材质渲染` | [Layered rendering](references/layered-rendering.md) |
+| `/真空等级相关` | [Vacuum level integration](references/vacuum-level-integration.md) |
 | `/ae相关` | [AE integration](references/ae-integration.md) |
 
-Always read [Shared workflow](references/shared-workflow.md). Use [Evidence and validation map](references/verified-source-map.md) to locate the closest working implementation and its acceptance boundary before editing.
+At the start of every development task, read the [Command reference index](references/INDEX.md), then read only the selected command document first. Consult [Shared workflow](references/shared-workflow.md) when the task crosses registration windows or lifecycle stages, and consult [Evidence and validation map](references/verified-source-map.md) when choosing an existing implementation or recording acceptance status. This keeps unrelated command guidance out of the active context while preserving the mandatory project-index check.
 
 ## Non-Negotiable Constraints
 
